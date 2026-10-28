@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(206, 213, 218);
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.field-container {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+.color-pallete{
+    /* border: 1px solid green; */
+    display: flex;
+    cursor: pointer;
+}
+
+.color-cell, .tool-cell{
+    background-color: rgb(33, 34, 35);
+    width: 100%;
+    aspect-ratio: 1/1;
+    /* border: 1px solid blue; */
+}
+
+.tool-cell {
+    background: transparent;
+    border: 1px solid white;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tool-cell img {
+    width: 80%;
+}
+
+.color-cell.red {
+    background-color: red;
+}
+.color-cell.green {
+    background-color: green;
+}
+.color-cell.blue {
+    background-color: blue;
+}
+
+.field{
+    /* border: 1px solid orange; */
+    width: 60vw;
+    height: 30vw;
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    gap: 1px;
+    background-color: black;
+    box-sizing: border-box;
+    padding: 1px;
+}
+
+.selected {
+    outline: 2px solid white;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+.selected:hover {
+    transfrom: scale(1);
+}
+
+.fill-tool {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fill-tool img {
+  width: 80%;
+}
+.cell {
+    background: rgb(62, 62, 62);
+}
+
+.cell:hover {
+    background-color: rgb(100, 94, 91);
+    opacity: .5;
+}
